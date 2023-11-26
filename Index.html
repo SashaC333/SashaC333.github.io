@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="Actividad D6- Proyecto final">
+        <meta name="keywords" content="HTML5, CSS3, JavaScript">
+        <title>Semana 16</title>
+        <link rel="JavaScript" href="javascript.js">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    
+    <body>
+<!--Header-->
+        <header class="c-6">
+            <h1>Pagina Web: Proyecto</h1>
+        </header>
+<!--Nav-->
+        <nav class="c-6 grupoNAV">
+            <a href="#exp"><b>Explicacion</b></a>
+            <a href="#imgs"><b>Imagenes</b></a>
+            <a href="#forms"><b>Formulario</b></a>
+            <a href="#ticks"><b>Ticket</b></a>
+        </nav>
+<!--Section-->
+        <section class="c-4 ">
+            <!--PRINCIPIO DE LA PAGINA-->
+            <div>
+                <header>
+                    <a name="exp">
+                        <h2>Explicacion:</h2>
+                    </a>
+                </header>
+                <p class="cuerpo">
+                    Esta pagina sera una simulacion de comprar un producto, en este caso puse 
+                    como si se vendieran estas paginas de dibujos. En el Costado se encuentran las instrucciones de
+                    la funcionalidad de la pagina. En caso de no compltar de llenar los campos estos 
+                    apareceran como no validos y la venta no se vera realizada.
+                </p>
+            </div>
+            <!--IMAGENES DE LA PAGINA-->
+            <div>
+                <header>
+                    <a name="imgs">
+                        <h2>Imagenes del producto:</h2>
+                    </a>
+                </header>
+                <div class="grupoIMG">
+                    <figure>
+                        <img src="img/perritoT.jpeg" height="225" width="300">
+                        <figcaption>
+                            Perrito tuturial.
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="img/perritoE.jpeg" height="225" width="155">
+                        <figcaption>
+                            Perrito Escalas.
+                        </figcaption>
+                    </figure>
+                    
+                    <figure>
+                        <img src="img/perritoL.jpeg" height="225" width="300">
+                        <figcaption>
+                            Perrito Lapiz.
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <img src="img/perritoP.jpeg" height="225" width="300">
+                        <figcaption>
+                            Perrito pluma.
+                        </figcaption>
+                    </figure>
+                </div>
+                <footer>
+                    <h5>Imagenes por Sasha Cabral Madrid</h5>
+                </footer>
+            </div>
+
+            <!--FORMULARIO DE LA PAGINA-->
+            <div>
+                <header>
+                    <a name="forms">
+                        <h2>Pide tu producto:</h2>
+                    </a>
+                </header>
+                <form class="esp">
+                    <div class="grupo">
+                        <label>Nombre del producto:</label>
+                        <input type="text" id="n">
+                        <label id="error_n" class="valida"></label>
+                
+                
+                        <label>Precio del producto:</label>
+                        <input type="number" id="pp">
+                        <label id="error_pp" class="valida"></label>
+                
+                        <label>Cupon de descuento:</label>
+                        <input type="number" id="d">
+                        <label id="error_d" class="valida"></label>
+                
+                        <label></label>
+                        <input type="button" value="Comprar" class="boton" onclick="boton()">
+                    </div>
+                </form>
+                <footer>
+                    <h5>Fin formulario</h5>
+                </footer>
+            </div>
+
+            <!--RESULTADOS DE FORMULARIO-->
+            <div>
+                <header>
+                    <a name="ticks">
+                        <h2>Ticket virtual:</h2>
+                    </a>
+                </header>
+                <form class="esp">
+                    <div class="grupo">
+                        <label>El producto</label>
+                        <input type="text" id="np" readonly>
+                        <label></label>
+                
+                        <label>Total del descuento</label>
+                        <input type="text" id="td" readonly>
+                        <label></label>
+                
+                        <label>Total a pagar</label>
+                        <input type="text" id="tp" readonly>
+                        <label></label>
+                    </div>
+                </form>
+                <footer>
+                    <h5>Fin formulario</h5>
+                </footer>
+            </div>
+
+        </section>
+
+<!--Aside-->
+        <aside class="c-2">
+            <div class="esp txt">
+                <header>
+                    <h2>Instrucciones:</h2>
+                </header>
+                <ol>
+                    <li>Inserte el nombre del producto.</li>
+                    <li>Inserte el precio del producto (no tiene un precio fijo).</li>
+                    <li>Si posee un cupon, inserte el descuento de este (si no posee uno ponga 0).</li>
+                    <li>De a Comprar</li>
+                    <li>En la parte de abajo aparecera su ticket</li>
+                    <li>Y seria todo.</li>
+                </ol>
+            </div>
+        </aside>
+<!--Footer-->
+        <footer class="c-6 footer grupoFOOT">
+            <h5>Alumno:</h5>
+            <h6>Sasha Cabral Madrid</h6>
+
+            <h5>Docente:</h5>
+            <h6>Mónica Alejandra Olea Villar</h6>
+
+            <h5>Grupo y semestre:</h5>
+            <h6>1er Semestre C</h6>
+        </footer>
+    </body>
+    <script languaje="JavaScript">
+
+        function boton() {
+            var pp = document.getElementById("pp").value;
+            var n = document.getElementById("n").value;
+            var np = document.getElementById("np").value;
+            var d = document.getElementById("d").value;
+            var td = document.getElementById("td").value;
+            var tp = document.getElementById("td").value;
+            //captura etiquetas;
+            var error_n = document.getElementById("error_n");
+            var error_pp = document.getElementById("error_pp");
+            var error_d = document.getElementById("error_d");
+
+            //inicializa en 0
+            error_n.innerHTML = "";
+            error_pp.innerHTML = "";
+            error_d.innerHTML = "";
+
+            if (n == "") {
+                error_n.innerHTML = "DATOS INSUFICIENTES";
+                document.getElementById("np").value = ("NO VALIDADO");
+                document.getElementById("td").value = ("NO VALIDADO");
+                document.getElementById("tp").value = ("NO VALIDADO");
+            }
+            if (pp == "") {
+                error_pp.innerHTML = "DATOS INSUFICIENTES";
+                document.getElementById("np").value = ("NO VALIDADO");
+                document.getElementById("td").value = ("NO VALIDADO");
+                document.getElementById("tp").value = ("NO VALIDADO");
+            }
+            if (d == "") {
+                error_d.innerHTML = "DATOS INSUFICIENTES";
+                document.getElementById("np").value = ("NO VALIDADO");
+                document.getElementById("td").value = ("NO VALIDADO");
+                document.getElementById("tp").value = ("NO VALIDADO");
+            }
+            if (n != "" && pp != "" && d != "") {
+                error_n.innerHTML = "";
+                error_pp.innerHTML = "";
+                error_d.innerHTML = "";
+                alert("Datos completos");
+                if (d == "" || d == 0) {
+                    document.getElementById("np").value = (n);
+                    document.getElementById("td").value = ("no hubo cupon");
+                    document.getElementById("tp").value = (pp);
+                }
+                else {
+                    td = ((d / 100) * pp);
+                    document.getElementById("np").value = (n);
+                    document.getElementById("td").value = (td);
+                    document.getElementById("tp").value = (pp - td);
+                }
+            }
+        }
+    </script>
+</html>

@@ -1,0 +1,108 @@
+header{
+    background-color: black;
+    color: antiquewhite;
+}
+nav{
+    text-decoration: none;
+    background-color:darkslategray;
+}
+
+nav a{
+    text-decoration: none;
+    color: antiquewhite;
+}
+html{
+    background-color: cadetblue;
+}
+.footer{
+    background-color:burlywood;
+}
+h2{
+    background-color: darkslategrey;
+    text-align: start;
+    padding: 10px;
+}
+[class*="c-"]{
+    float: left;
+}
+.c-1{width: 16.66%;}
+.c-2{width: 33.33%;}
+.c-3{width: 50%;}
+.c-4{width: 66.66%;}
+.c-5{width: 83.33%;}
+.c-6{width: 100%;}
+
+*{
+    text-align: center;
+}
+
+/*FORM*/
+
+
+.esp{
+    display: grid;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+aside{
+    display: grid;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+section{
+    font-family: monospace;
+    font-size: 20px;
+}
+
+input{
+    height: 30px;
+    font-family: monospace;
+    font-size: 20px;
+}
+
+.txt{
+    font-family: monospace;
+    font-size: 15px;
+}
+
+.grupo{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 20px;
+}
+
+.grupoIMG{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.grupoNAV{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    gap: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+.grupoFOOT{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.valida{
+    color: red;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.cuerpo{
+    text-align: justify;
+    padding: 30px;
+}
+
+.boton{
+    background-color: midnightblue;
+    color: whitesmoke;
+    margin-bottom: 20px;
+}
